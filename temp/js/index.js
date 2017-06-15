@@ -72,4 +72,24 @@ $(".finishTimeInput").live('click',function(){
     $(this).datepicker();
 });
 
+$("#export").button().click(function()
+{
+    $datepicker = $("#datepicker").val();
+    $url = './ajax/exportList.php';
+
+    if($datepicker == ''){
+        $("#result").text("«Î—°‘Ò»’∆⁄").show();
+        return false;
+    }else
+    {
+        $.post(
+            $url,
+            {'date':$datepicker},
+            function(data)
+            {
+                window.location.href = $url;
+            }
+        );
+    }
+});
 

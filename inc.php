@@ -7,6 +7,7 @@
     include_once('./class/filter.class.php');
     include_once('./class/record.class.php');
     include_once('./class/user.class.php');
+    include_once('./class/export.class.php');
 
     $smarty = new Smarty();
     $smarty->template_dir       = './temp/';

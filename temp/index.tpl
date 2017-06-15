@@ -4,7 +4,8 @@
         <p>
             <span class = "dataTitle">日期：</span>
             <span><input type="text" id="datepicker"></span>
-            <span><button id="search" value="查询"">查询</button></span>
+            <span><button id="search">查询</button></span>
+            <span><button id="export">导出</button></span>
         </p>
     </div>
     <div class="result" id="result"></div>

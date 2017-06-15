@@ -238,8 +238,8 @@
 
 button
 {
-    width:35px;
-    height: 20px;
+
+    height: 30px;
     font-size:12px;
 }
 
@@ -254,6 +254,10 @@ button
 #search
 {
     width:25px;
+}
+#export
+{
+    width: 25px;
 }
 
 

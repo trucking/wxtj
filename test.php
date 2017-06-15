@@ -37,7 +37,11 @@ $obj = mysql_query($sql,$conn);
 $result = mysql_fetch_array($obj);
 var_dump($result);*/
 include_once('inc.php');
-$test = new record();
-$arr = $test->getList('2017-05');
-print_r($arr);
+$fileName = 'test';
+$title = array('编号','报告单号','车间/部门','报告名称','申请日期','委托单位','委托时间','费用预估','完工日期','验收情况','合同费用','负责人');
+$value = array( array('nihao','我不好','3','4','5','6','7','8','9','0','11','12'),
+                array('nihao','我不好','3','4','5','6','7','8','9','0','11','12'),
+                array('nihao','我不好','3','4','5','6','7','8','9','0','11','12'));
+$test = new export($fileName,$title,$value);
+
 //Database::echoSql();

@@ -19,7 +19,9 @@ if($date == NULL)
 }
 $result = gbkToUtf8($result);
 echo json_encode($result);
-function gbkToUtf8($str){
+
+function gbkToUtf8($str)
+{
     foreach($str as $k=>$v)
     {
         foreach($v as $key=>$val)
