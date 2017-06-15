@@ -8,8 +8,8 @@
 error_reporting(0);
 include_once('../class/export.class.php');
 include_once('../class/record.class.php');
-$fileName = $_POST['date'].'外委维修统计表';
+$fileName = $_GET['date'].'外委维修统计表';
 $title = array('编号','报告单号','车间/部门','报告名称','申请日期','委托单位','委托时间','费用预估','负责人');
 $obj = new record();
-$value = $obj->getList($_POST['date']);
+$value = $obj->getList($_GET['date']);
 new export($fileName,$title,$value);

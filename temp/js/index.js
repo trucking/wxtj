@@ -75,21 +75,14 @@ $(".finishTimeInput").live('click',function(){
 $("#export").button().click(function()
 {
     $datepicker = $("#datepicker").val();
-    $url = './ajax/exportList.php';
+    $url = './ajax/exportList.php?date='+$datepicker;
 
     if($datepicker == ''){
         $("#result").text("«Î—°‘Ò»’∆⁄").show();
         return false;
     }else
     {
-        $.post(
-            $url,
-            {'date':$datepicker},
-            function(data)
-            {
-                window.location.href = $url;
-            }
-        );
+        window.location.href = $url;
     }
 });
 
